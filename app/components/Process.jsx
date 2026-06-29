@@ -43,7 +43,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="processus" className="relative py-32 overflow-hidden">
+    <section id="processus" className="relative py-20 md:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(139,111,71,0.04)_50%,transparent_100%)]" />
 
@@ -69,7 +69,7 @@ export function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-[0.95] tracking-[-0.02em] text-balance"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-[0.95] tracking-[-0.02em] text-balance"
             >
               Cinq étapes.
               <br />
@@ -113,8 +113,8 @@ export function Process() {
                 </div>
 
                 {/* Card */}
-                <div className={`${i % 2 === 1 ? 'md:col-start-2' : ''} pl-16 md:pl-0`}>
-                  <div className="group relative rounded-2xl border border-[var(--border-strong)] bg-[var(--bg-secondary)]/60 backdrop-blur-sm p-8 hover:border-bronze-500/40 transition-all duration-500 overflow-hidden">
+                <div className={`${i % 2 === 1 ? 'md:col-start-2' : ''} pl-0 md:pl-16`}>
+                  <div className="group relative rounded-2xl border border-[var(--border-strong)] bg-[var(--bg-secondary)]/60 backdrop-blur-sm p-6 md:p-8 hover:border-bronze-500/40 transition-all duration-500 overflow-hidden">
                     {/* Time badge */}
                     <div className="absolute top-5 right-5 inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-tertiary)] border border-[var(--border)] px-3 py-1">
                       <span className="h-1 w-1 rounded-full bg-copper-500 animate-pulse" />
@@ -133,7 +133,7 @@ export function Process() {
                       <step.icon size={22} className="text-teal-300" strokeWidth={1.4} />
                     </div>
 
-                    <h3 className="mt-5 font-display text-3xl md:text-4xl font-light text-[var(--text-primary)]">
+                    <h3 className="mt-5 font-display text-2xl md:text-4xl font-light text-[var(--text-primary)]">
                       {step.title}
                     </h3>
                     <p className="mt-3 text-[var(--text-secondary)] leading-relaxed">
