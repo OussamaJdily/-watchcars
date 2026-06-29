@@ -44,9 +44,9 @@ export function Navbar() {
       <motion.header
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-all duration-700',
+          'fixed inset-x-0 top-0 z-50 transition-all duration-300',
           scrolled ? 'pt-3' : 'pt-5'
         )}
       >
@@ -110,7 +110,7 @@ export function Navbar() {
 function BrandLogo() {
   return (
     <a href="#top" aria-label="WatchCars" className="flex-shrink-0">
-      <Logo size={32} />
+      <Logo size={32} className="[&>div:last-child]:hidden sm:[&>div:last-child]:block" />
     </a>
   );
 }
