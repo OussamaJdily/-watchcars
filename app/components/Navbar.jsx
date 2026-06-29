@@ -70,17 +70,29 @@ export function Navbar() {
               theme={theme} 
               mounted={mounted} 
               toggle={toggle} 
-              onMenuOpen={() => setOpen(true)} 
             />
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setOpen(true)}
-              aria-label="Menu"
-              className="lg:hidden h-10 w-10 grid place-items-center rounded-lg border border-[var(--border)] hover:bg-[var(--bg-secondary)] transition-all"
-            >
-              <Menu size={18} />
-            </button>
+            {/* Mobile Right: Theme toggle + Menu */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <button
+                onClick={toggle}
+                aria-label="Toggle theme"
+                className="h-10 w-10 grid place-items-center rounded-lg border border-[var(--border)] hover:bg-[var(--bg-secondary)] transition-all"
+              >
+                {mounted && theme === 'dark' ? (
+                  <Sun size={16} className="text-amber-500" />
+                ) : (
+                  <Moon size={16} className="text-teal-500" />
+                )}
+              </button>
+              <button
+                onClick={() => setOpen(true)}
+                aria-label="Menu"
+                className="h-10 w-10 grid place-items-center rounded-lg border border-[var(--border)] hover:bg-[var(--bg-secondary)] transition-all"
+              >
+                <Menu size={18} />
+              </button>
+            </div>
           </nav>
         </div>
       </motion.header>
@@ -97,7 +109,7 @@ export function Navbar() {
 
 function BrandLogo() {
   return (
-    <a href="#top" aria-label="WatchCars" className="flex-shrink-0 hidden sm:block">
+    <a href="#top" aria-label="WatchCars" className="flex-shrink-0">
       <Logo size={32} />
     </a>
   );
