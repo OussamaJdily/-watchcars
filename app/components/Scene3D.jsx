@@ -119,23 +119,32 @@ function Calibre() {
   );
 }
 
-function ParticleField() {
+function WaterParticles() {
   const pointsRef = useRef();
-  const positions = new Float32Array(300 * 3);
-  for (let i = 0; i < 300; i++) {
-    positions[i * 3] = (Math.random() - 0.5) * 16;
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  const count = 500;
+  const positions = new Float32Array(count * 3);
+  const speeds = new Float32Array(count);
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 20;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 14;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    speeds[i] = 0.2 + Math.random() * 0.6;
   }
   useFrame((state) => {
-    if (pointsRef.current) pointsRef.current.rotation.y = state.clock.getElapsedTime() * 0.02;
+    if (!pointsRef.current) return;
+    const pos = pointsRef.current.geometry.attributes.position.array;
+    for (let i = 0; i < count; i++) {
+      pos[i * 3 + 1] -= speeds[i] * 0.008;
+      if (pos[i * 3 + 1] < -7) pos[i * 3 + 1] = 7;
+    }
+    pointsRef.current.geometry.attributes.position.needsUpdate = true;
   });
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={300} array={positions} itemSize={3} args={[positions, 3]} />
+        <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial size={0.025} color="#C9A876" transparent opacity={0.6} sizeAttenuation />
+      <pointsMaterial size={0.04} color="#2DD4BF" transparent opacity={0.35} sizeAttenuation />
     </points>
   );
 }
@@ -152,7 +161,7 @@ export function Scene3D() {
           <Float speed={1.4} rotationIntensity={0.2} floatIntensity={0.4}>
             <Calibre />
           </Float>
-          <ParticleField />
+          <WaterParticles />
           <Environment preset="warehouse" />
         </Suspense>
       </Canvas>

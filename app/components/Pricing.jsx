@@ -176,7 +176,7 @@ export function Pricing() {
                 href="#reservation"
                 className={`mt-8 block text-center rounded-full px-6 py-3.5 text-[12px] font-semibold tracking-[0.2em] uppercase transition-all ${
                   plan.featured
-                    ? 'bg-gradient-to-br from-electric-300 via-teal-500 to-teal-600 text-ink-950 shadow-[0_8px_24px_-8px_rgba(0,217,255,0.6)] hover:shadow-[0_12px_32px_-8px_rgba(0,217,255,0.8)]'
+                    ? 'bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 text-ink-950 shadow-[0_8px_24px_-8px_rgba(0,217,255,0.6)] hover:shadow-[0_12px_32px_-8px_rgba(0,217,255,0.8)]'
                     : 'border border-[var(--border-strong)] text-[var(--text-primary)] hover:border-bronze-500 hover:text-teal-300'
                 }`}
               >

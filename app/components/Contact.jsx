@@ -182,7 +182,7 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="group w-full inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-br from-electric-300 via-teal-500 to-teal-600 px-7 py-4 text-[12px] font-semibold tracking-[0.2em] uppercase text-ink-950 shadow-[0_10px_40px_-10px_rgba(0,217,255,0.5)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.7)] transition-all shine"
+                  className="group w-full inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 px-7 py-4 text-[12px] font-semibold tracking-[0.2em] uppercase text-ink-950 shadow-[0_10px_40px_-10px_rgba(0,217,255,0.5)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.7)] transition-all shine"
                 >
                   <Send size={14} />
                   Confirmer ma réservation

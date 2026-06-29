@@ -1,17 +1,13 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ArrowDown, Sparkles, Clock, Shield } from 'lucide-react';
-
-const Scene3D = dynamic(() => import('./Scene3D').then(m => m.Scene3D), {
-  ssr: false,
-  loading: () => null
-});
+import { VideoBackground } from './VideoBackground';
 
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden pt-32 pb-20">
+      <VideoBackground />
       <div className="relative z-10 container-px">
         <div className="mx-auto max-w-6xl">
           {/* Top meta line */}
@@ -88,7 +84,7 @@ export function Hero() {
           >
             <a
               href="#reservation"
-              className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-electric-300 via-teal-500 to-teal-600 px-8 py-4 text-sm font-semibold tracking-[0.15em] uppercase text-ink-950 shadow-[0_12px_40px_-12px_rgba(0,217,255,0.6)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.8)] transition-all shine"
+              className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 px-8 py-4 text-sm font-semibold tracking-[0.15em] uppercase text-ink-950 shadow-[0_12px_40px_-12px_rgba(0,217,255,0.6)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.8)] transition-all shine"
             >
               <Sparkles size={14} />
               Réserver un créneau

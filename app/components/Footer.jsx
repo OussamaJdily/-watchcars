@@ -65,7 +65,7 @@ export function Footer() {
           </h2>
           <a
             href="#reservation"
-            className="group mt-12 inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-electric-300 via-teal-500 to-teal-600 px-9 py-4 text-[12px] font-semibold tracking-[0.2em] uppercase text-ink-950 shadow-[0_10px_40px_-10px_rgba(0,217,255,0.5)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.7)] transition-all shine"
+            className="group mt-12 inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 px-9 py-4 text-[12px] font-semibold tracking-[0.2em] uppercase text-ink-950 shadow-[0_10px_40px_-10px_rgba(0,217,255,0.5)] hover:shadow-[0_20px_60px_-12px_rgba(0,217,255,0.7)] transition-all shine"
           >
             Réserver maintenant
             <span className="text-base transition-transform group-hover:translate-x-1">→</span>
@@ -148,7 +148,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="w-full rounded-full bg-gradient-to-br from-electric-300 via-teal-500 to-teal-600 px-5 py-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-ink-950 hover:shadow-[0_8px_24px_-8px_rgba(0,217,255,0.6)] transition-all"
+                className="w-full rounded-full bg-gradient-to-br from-teal-400 via-teal-500 to-teal-600 px-5 py-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-ink-950 hover:shadow-[0_8px_24px_-8px_rgba(0,217,255,0.6)] transition-all"
               >
                 S'inscrire
               </button>
