@@ -1,5 +1,5 @@
 {
-  "name": "watchcars-casablanca",
+  "name": "watchcars-site",
   "version": "1.0.0",
   "private": true,
   "description": "WatchCars Casablanca — Site officiel du lavage automobile premium. Next.js 14, Three.js, Framer Motion.",
